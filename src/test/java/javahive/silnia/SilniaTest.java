@@ -1,6 +1,8 @@
 package javahive.silnia;
 
 
+import java.math.BigDecimal;
+
 import javahive.silnia.KalkulatorSilni;
 import javahive.silnia.impl.KalkulatorSilniGuava;
 import javahive.silnia.impl.KalkulatorSilniBigDecimal;

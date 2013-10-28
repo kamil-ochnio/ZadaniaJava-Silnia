@@ -1,6 +1,8 @@
 package javahive.silnia.impl;
 
 
+import java.math.BigDecimal;
+
 import javahive.silnia.KalkulatorSilni;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -14,7 +16,19 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
  */
 
 public class KalkulatorSilniBigDecimal implements KalkulatorSilni{
+    //metoda licząca silnie w sposób rekurencyjny
+    public BigDecimal liczBigDecimal(long podstawa){
+    	if(podstawa<0) throw new ArithmeticException();
+        if(podstawa>0) {
+            return liczBigDecimal(podstawa-1).multiply(BigDecimal.valueOf(podstawa));
+        } else {
+            return BigDecimal.ONE;
+        }
+    }
+    
     public String licz(int arg) {
-        throw new NotImplementedException();
+        //wynik działania rekrurencyjnej metody rzutowany jest na String,
+        //Bo string przechowa bez problemu duże liczby
+        return ""+liczBigDecimal(arg);
     }
 }
