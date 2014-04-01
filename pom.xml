@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>marcin</groupId>
-  <artifactId>ZadaniaJava-Silnie-Kamil-Ochnio</artifactId>
+  <groupId>com.blogspot.Java-HIVE</groupId>
+  <artifactId>Silnia.Kamil.Ochnio</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>ZadaniaJava-Silnie-Kamil-Ochnio</name>
+  <name>Ochnio_Kamil_1-Silnia</name>
   <url>http://maven.apache.org</url>
   <contributors>
       <contributor>
