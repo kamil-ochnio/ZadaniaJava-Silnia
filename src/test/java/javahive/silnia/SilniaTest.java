@@ -1,8 +1,6 @@
 package javahive.silnia;
 
 
-import java.math.BigDecimal;
-
 import javahive.silnia.KalkulatorSilni;
 import javahive.silnia.impl.KalkulatorSilniGuava;
 import javahive.silnia.impl.KalkulatorSilniBigDecimal;
@@ -132,8 +130,22 @@ public class SilniaTest {
     
     @Test
     public void t008WszystkieKalkulatorySilniPowinnyLiczycZero(){
-    	//TODO napisać test który sprawdzi czy wszystkie kalkulatory liczą 0!
-    	Assert.fail();
+    	//given
+    	KalkulatorSilni[]wszystkieKalkulatory={
+    			new SzybkiKalkulatorSilni(),
+    			new OptymalnyKalkulatorSilni(),
+    			new KalkulatorSilniGuava(),
+    			new KalkulatorSilniBigDecimal(),
+    			new KalkulatorSilniNieRekurencyjny(),
+    	};
+    	final int podstawa=0;
+    	
+    	for (KalkulatorSilni kalkulator:wszystkieKalkulatory){
+    		//when
+    		String wynik=kalkulator.licz(podstawa);
+    		//then
+    		Assert.assertEquals("1", wynik);
+    	}
     }
     
 
